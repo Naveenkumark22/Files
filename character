@@ -3,6 +3,8 @@ Character.isDigit(char ch)
 Checks if the specified character is a digit.
 Character.isLetter(char ch)
 
+character.hetNumericValue()
+
 Checks if the specified character is a letter.
 Character.isLetterOrDigit(char ch)
 
