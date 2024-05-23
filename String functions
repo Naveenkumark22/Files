@@ -1,0 +1,177 @@
+int length()
+
+String str = "Hello"; int len = str.length(); // 5
+char charAt(int index)
+
+char ch = str.charAt(1); // 'e'
+String substring(int beginIndex)
+
+String substr = str.substring(2); // "llo"
+String substring(int beginIndex, int endIndex)
+
+String substr = str.substring(1, 4); // "ell"
+int indexOf(int ch)
+
+int index = str.indexOf('e'); // 1
+int indexOf(String str)
+
+int index = str.indexOf("llo"); // 2
+int lastIndexOf(int ch)
+
+int lastIndex = str.lastIndexOf('l'); // 3
+int lastIndexOf(String str)
+
+int lastIndex = str.lastIndexOf("l"); // 3
+boolean contains(CharSequence s)
+
+boolean contains = str.contains("ell"); // true
+boolean startsWith(String prefix)
+
+boolean starts = str.startsWith("He"); // true
+boolean startsWith(String prefix, int toffset)
+
+boolean starts = str.startsWith("ll", 2); // true
+boolean endsWith(String suffix)
+
+boolean ends = str.endsWith("lo"); // true
+String replace(char oldChar, char newChar)
+
+String replaced = str.replace('l', 'p'); // "Heppo"
+String replace(CharSequence target, CharSequence replacement)
+
+String replaced = str.replace("llo", "y"); // "Hey"
+String replaceAll(String regex, String replacement)
+
+String replaced = "abcabc".replaceAll("a", "x"); // "xbcxbc"
+String replaceFirst(String regex, String replacement)
+
+String replaced = "abcabc".replaceFirst("a", "x"); // "xbcabc"
+String[] split(String regex)
+
+String[] parts = "a,b,c".split(","); // ["a", "b", "c"]
+String[] split(String regex, int limit)
+
+String[] parts = "a,b,c".split(",", 2); // ["a", "b,c"]
+String toLowerCase()
+
+String lower = str.toLowerCase(); // "hello"
+String toLowerCase(Locale locale)
+
+String lower = str.toLowerCase(Locale.US); // "hello"
+String toUpperCase()
+
+String upper = str.toUpperCase(); // "HELLO"
+String toUpperCase(Locale locale)
+
+String upper = str.toUpperCase(Locale.US); // "HELLO"
+String trim()
+
+String strWithSpaces = " Hello "; String trimmed = strWithSpaces.trim(); // "Hello"
+boolean equals(Object anObject)
+
+boolean isEqual = str.equals("Hello"); // true
+boolean equalsIgnoreCase(String anotherString)
+
+boolean isEqualIgnoreCase = str.equalsIgnoreCase("hello"); // true
+int compareTo(String anotherString)
+
+int cmp = str.compareTo("Hello"); // 0
+int compareToIgnoreCase(String str)
+
+int cmpIgnoreCase = str.compareToIgnoreCase("hello"); // 0
+boolean matches(String regex)
+
+boolean matches = str.matches("H.llo"); // true
+String concat(String str)
+
+String concatenated = str.concat(" World"); // "Hello World"
+boolean isEmpty()
+
+boolean empty = str.isEmpty(); // false
+String intern()
+
+String interned = str.intern(); // "Hello"
+String toString()
+
+String str2 = str.toString(); // "Hello"
+char[] toCharArray()
+
+char[] charArray = str.toCharArray(); // ['H', 'e', 'l', 'l', 'o']
+static String valueOf(boolean b)
+
+String boolStr = String.valueOf(true); // "true"
+static String valueOf(char c)
+
+String charStr = String.valueOf('c'); // "c"
+static String valueOf(char[] data)
+
+char[] data = {'H', 'e', 'l', 'l', 'o'}; String dataStr = String.valueOf(data); // "Hello"
+static String valueOf(char[] data, int offset, int count)
+
+String dataStr = String.valueOf(data, 1, 3); // "ell"
+static String valueOf(double d)
+
+String doubleStr = String.valueOf(1.23); // "1.23"
+static String valueOf(float f)
+
+String floatStr = String.valueOf(1.23f); // "1.23"
+static String valueOf(int i)
+
+String intStr = String.valueOf(123); // "123"
+static String valueOf(long l)
+
+String longStr = String.valueOf(123L); // "123"
+static String valueOf(Object obj)
+
+String objStr = String.valueOf(new Integer(123)); // "123"
+static String copyValueOf(char[] data)
+
+String copyValue = String.copyValueOf(data); // "Hello"
+static String copyValueOf(char[] data, int offset, int count)
+
+String copyValue = String.copyValueOf(data, 1, 3); // "ell"
+byte[] getBytes()
+
+byte[] bytes = str.getBytes(); // [72, 101, 108, 108, 111]
+byte[] getBytes(String charsetName)
+
+byte[] bytes = str.getBytes("UTF-8");
+byte[] getBytes(Charset charset)
+
+byte[] bytes = str.getBytes(StandardCharsets.UTF-8);
+void getChars(int srcBegin, int srcEnd, char[] dst, int dstBegin)
+
+char[] dst = new char[5]; str.getChars(0, 5, dst, 0); // dst = ['H', 'e', 'l', 'l', 'o']
+boolean regionMatches(int toffset, String other, int ooffset, int len)
+
+boolean regionMatches = str.regionMatches(0, "Hello World", 0, 5); // true
+boolean regionMatches(boolean ignoreCase, int toffset, String other, int ooffset, int len)
+
+boolean regionMatches = str.regionMatches(true, 0, "hello World", 0, 5); // true
+CharSequence subSequence(int beginIndex, int endIndex)
+
+CharSequence subSeq = str.subSequence(1, 4); // "ell"
+static String format(String format, Object... args)
+
+String formatted = String.format("Hello, %s!", "World"); // "Hello, World!"
+static String format(Locale locale, String format, Object... args)
+
+String formatted = String.format(Locale.US, "Hello, %s!", "World"); // "Hello, World!"
+static String join(CharSequence delimiter, CharSequence... elements)
+
+String joined = String.join(", ", "a", "b", "c"); // "a, b, c"
+static String join(CharSequence delimiter, Iterable<? extends CharSequence> elements)
+
+List<String> list = Arrays.asList("a", "b", "c"); String joined = String.join(", ", list); // "a, b, c"
+static String valueOf(char[] data)
+
+String dataStr = String.valueOf(data); // "Hello"
+static String valueOf(char[] data, int offset, int count)
+
+String dataStr = String.valueOf(data, 1, 3); // "ell"
+static String copyValueOf(char[] data)
+
+String copyValue = String.copyValueOf(data); // "Hello"
+static String copyValueOf(char[] data, int offset, int count)
+
+String copyValue = String.copyValueOf(data, 1, 3); // "ell"
