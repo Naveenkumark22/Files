@@ -1,3 +1,6 @@
+https://chatgpt.com/share/ad880b96-fd86-4a46-8331-e99086303e48
+
+
 add(E e): Adds the specified element to the end of the list.
 add(int index, E element): Inserts the specified element at the specified position in the list.
 addAll(Collection<? extends E> c): Adds all of the elements in the specified collection to the end of the list, in the order that they are returned by the collection's iterator.
