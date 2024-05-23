@@ -1,0 +1,104 @@
+for (String key : map.keySet()) {
+            System.out.println("Key: " + key + ", Value: " + map.get(key));
+        }
+
+----------------------
+
+        for (Map.Entry<String, Integer> entry : map.entrySet()) {
+            System.out.println("Key: " + entry.getKey() + ", Value: " + entry.getValue());
+        }
+
+-----------------------
+        for (Integer value : map.values()) {
+            System.out.println("Value: " + value);
+        }
+
+---------------------
+        map.forEach((key, value) -> System.out.println("Key: " + key + ", Value: " + value));
+
+----------------------------
+
+
+put(K key, V value)
+putAll(Map<? extends K,? extends V> m)
+--
+putIfAbsent(K key, V value)
+
+HashMap<String, Integer> map = new HashMap<>();
+map.put("Alice", 30);
+map.putIfAbsent("Alice", 35);
+map.putIfAbsent("Bob", 25);
+System.out.println(map); // Output: {Alice=30, Bob=25}
+----
+get(Object key)
+getOrDefault(Object key, V defaultValue)
+containsKey(Object key)
+containsValue(Object value)
+remove(Object key)
+remove(Object key, Object value)
+--------------
+replace(K key, V value)
+
+HashMap<String, Integer> map = new HashMap<>();
+map.put("Alice", 30);
+map.replace("Alice", 35);
+System.out.println(map); // Output: {Alice=35}
+
+replace(K key, V oldValue, V newValue)
+HashMap<String, Integer> map = new HashMap<>();
+map.put("Alice", 30);
+map.replace("Alice", 25, 35); // Won't replace
+map.replace("Alice", 30, 35); // Will replace
+System.out.println(map); // Output: {Alice=35}
+
+------------
+replaceAll(BiFunction<? super K,? super V,? extends V> function)
+
+HashMap<String, Integer> map = new HashMap<>();
+map.put("Alice", 30);
+map.put("Bob", 25);
+map.replaceAll((k, v) -> v + 10);
+System.out.println(map); // Output: {Alice=40, Bob=35}
+
+---------------
+size()
+isEmpty()
+clear()
+keySet()
+values()
+---------------
+entrySet()
+
+HashMap<String, Integer> map = new HashMap<>();
+map.put("Alice", 30);
+map.put("Bob", 25);
+System.out.println(map.entrySet()); // Output: [Alice=30, Bob=25]
+
+----------------
+forEach(BiConsumer<? super K,? super V> action)
+HashMap<String, Integer> map = new HashMap<>();
+map.put("Alice", 30);
+map.put("Bob", 25);
+map.forEach((key, value) -> System.out.println(key + ": " + value));
+// Output: 
+// Alice: 30
+// Bob: 25
+
+
+---------------------
+compute(K key, BiFunction<? super K,? super V,? extends V> remappingFunction)
+computeIfAbsent(K key, Function<? super K,? extends V> mappingFunction)
+-----------
+computeIfPresent(K key, BiFunction<? super K,? super V,? extends V> remappingFunction)
+
+HashMap<String, Integer> map = new HashMap<>();
+map.put("Alice", 30);
+map.computeIfPresent("Alice", (k, v) -> v + 10);
+System.out.println(map); // Output: {Alice=40}
+
+----------------
+merge(K key, V value, BiFunction<? super V,? super V,? extends V> remappingFunction)
+
+
+
+
