@@ -1,0 +1,68 @@
+Character.isDigit(char ch)
+
+Checks if the specified character is a digit.
+Character.isLetter(char ch)
+
+Checks if the specified character is a letter.
+Character.isLetterOrDigit(char ch)
+
+Checks if the specified character is a letter or a digit.
+Character.isWhitespace(char ch)
+
+Checks if the specified character is a whitespace character.
+Character.isUpperCase(char ch)
+
+Checks if the specified character is an uppercase letter.
+Character.isLowerCase(char ch)
+
+Checks if the specified character is a lowercase letter.
+Character.toUpperCase(char ch)
+
+Converts the specified character to its uppercase form.
+Character.toLowerCase(char ch)
+
+Converts the specified character to its lowercase form.
+Character.isDefined(char ch)
+
+Checks if the specified character is defined in Unicode.
+Character.isSurrogate(char ch)
+
+Checks if the specified character is a Unicode surrogate code unit.
+Character.isTitleCase(char ch)
+
+Checks if the specified character is a titlecase character.
+Character.getType(char ch)
+
+Returns a value indicating a character's general category.
+Character.isJavaIdentifierStart(char ch)
+
+Checks if the specified character is a valid start character for a Java identifier.
+Character.isJavaIdentifierPart(char ch)
+
+Checks if the specified character is a valid part of a Java identifier.
+Character.isUnicodeIdentifierStart(char ch)
+
+Checks if the specified character is a valid start character for a Unicode identifier.
+Character.isUnicodeIdentifierPart(char ch)
+
+Checks if the specified character is a valid part of a Unicode identifier.
+Character.isIdentifierIgnorable(char ch)
+
+Determines if the specified character should be regarded as an ignorable character in a Java identifier or a Unicode identifier.
+Character.digit(char ch, int radix)
+
+Converts the character (Unicode) to a digit in the specified radix.
+Character.forDigit(int digit, int radix)
+
+Returns the character representation of the specified digit in the specified radix.
+Character.codePointAt(CharSequence seq, int index)
+
+Returns the code point at the specified index of the specified CharSequence.
+Character.codePointBefore(CharSequence seq, int index)
+
+Returns the code point preceding the specified index of the specified CharSequence.
+Character.codePointCount(CharSequence seq, int beginIndex, int endIndex)
+
+Returns the number of Unicode code points in the text range of the specified CharSequence.
+Character.toChars(int codePoint)
+
